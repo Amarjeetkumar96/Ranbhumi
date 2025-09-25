@@ -9,7 +9,7 @@ import Schedule from "./pages/Schedule";
 import TeamManagement from "./pages/TeamManagement";
 
 export const publicRoutes = [
-  { path: "/", element: <Home /> },
+  { path: "/Ranbhumi", element: <Home /> },
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
   { path: "/tournament/:id", element: <TournamentDetails /> },
