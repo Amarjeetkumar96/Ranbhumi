@@ -1,0 +1,54 @@
+:root {
+  --color-accent: #facc15; /* yellow-400 */
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-900 text-white antialiased;
+}
+
+.card {
+  @apply bg-slate-800 rounded-xl p-6 shadow ring-1 ring-slate-700/50;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-yellow-400 text-slate-900 px-4 py-2 font-semibold transition hover:bg-yellow-300;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg bg-slate-700 text-white px-4 py-2 font-semibold transition hover:bg-slate-600;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-yellow-400 mb-4;
+}
+
+/* Decorative and utility styles */
+.bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(60% 60% at 10% 10%, rgba(250,204,21,0.15) 0%, rgba(250,204,21,0) 60%),
+    radial-gradient(50% 50% at 90% 20%, rgba(59,130,246,0.18) 0%, rgba(59,130,246,0) 60%),
+    radial-gradient(50% 50% at 50% 90%, rgba(16,185,129,0.18) 0%, rgba(16,185,129,0) 60%);
+  animation: floatBg 18s ease-in-out infinite alternate;
+  filter: blur(30px);
+}
+
+@keyframes floatBg {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-20px) scale(1.05); }
+}
+
+.glass {
+  @apply bg-slate-800/60 backdrop-blur-md ring-1 ring-white/10 shadow-xl;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium bg-yellow-400/15 text-yellow-300 ring-1 ring-yellow-300/30;
+}
+
+

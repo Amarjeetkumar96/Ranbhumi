@@ -1,0 +1,27 @@
+:root {
+  color-scheme: dark;
+}
+
+.theme-dark {
+  --bg: #0f172a; /* slate-900 */
+  --surface: #1f2937; /* slate-800 */
+  --text: #e5e7eb; /* gray-200 */
+}
+
+.theme-light {
+  --bg: #f8fafc; /* slate-50 */
+  --surface: #ffffff;
+  --text: #0f172a;
+}
+
+body.theme-light {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.theme-dark {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+
