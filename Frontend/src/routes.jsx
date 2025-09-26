@@ -7,23 +7,20 @@ import TournamentDetails from "./pages/TournamentDetails";
 import Leaderboard from "./pages/Leaderboard";
 import Schedule from "./pages/Schedule";
 import TeamManagement from "./pages/TeamManagement";
-
 export const publicRoutes = [
   { path: "/Ranbhumi", element: <Home /> },
-  { path: "/login", element: <Login /> },
-  { path: "/register", element: <Register /> },
-  { path: "/tournament/:id", element: <TournamentDetails /> },
-  { path: "/leaderboard", element: <Leaderboard /> },
-  { path: "/schedule", element: <Schedule /> },
+  { path: "/Ranbhumi/login", element: <Login /> },
+  { path: "/Ranbhumi/register", element: <Register /> },
+  { path: "/Ranbhumi/tournament/:id", element: <TournamentDetails /> },
+  { path: "/Ranbhumi/leaderboard", element: <Leaderboard /> },
+  { path: "/Ranbhumi/schedule", element: <Schedule /> },
 ];
 
 export const protectedUserRoutes = [
-  { path: "/dashboard", element: <UserDashboard /> },
-  { path: "/team", element: <TeamManagement /> },
+  { path: "/Ranbhumi/dashboard", element: <UserDashboard /> },
+  { path: "/Ranbhumi/team", element: <TeamManagement /> },
 ];
 
 export const protectedAdminRoutes = [
-  { path: "/admin", element: <AdminDashboard /> },
+  { path: "/Ranbhumi/admin", element: <AdminDashboard /> },
 ];
-
-

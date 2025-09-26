@@ -24,7 +24,7 @@ function Navbar() {
 
   const handleLogout = () => {
     logout();
-    navigate("/");
+    navigate("/Ranbhumi");
   };
   return (
     <nav className="bg-slate-800/80 backdrop-blur p-4 shadow-md sticky top-0 z-50">
@@ -34,20 +34,20 @@ function Navbar() {
           <span>GamePortal</span>
         </Link>
         <div className="flex items-center gap-4">
-          <Link to="/" className="hover:text-yellow-300">Home</Link>
-          <Link to="/leaderboard" className="hover:text-yellow-300">Leaderboard</Link>
-          <Link to="/schedule" className="hover:text-yellow-300">Schedule</Link>
+          <Link to="/Ranbhumi" className="hover:text-yellow-300">Home</Link>
+          <Link to="/Ranbhumi/leaderboard" className="hover:text-yellow-300">Leaderboard</Link>
+          <Link to="/Ranbhumi/schedule" className="hover:text-yellow-300">Schedule</Link>
           {isAuthenticated && (
-            <Link to="/dashboard" className="hover:text-yellow-300">Dashboard</Link>
+            <Link to="/Ranbhumi/dashboard" className="hover:text-yellow-300">Dashboard</Link>
           )}
           {role === "admin" && (
-            <Link to="/admin" className="hover:text-yellow-300">Admin</Link>
+            <Link to="/Ranbhumi/admin" className="hover:text-yellow-300">Admin</Link>
           )}
           <button onClick={toggleTheme} className="btn-secondary text-sm px-3 py-1">
             {theme === "light" ? "🌙" : "☀️"}
           </button>
           {!isAuthenticated ? (
-            <Link to="/login" className="hover:text-yellow-300">Login</Link>
+            <Link to="/Ranbhumi/login" className="hover:text-yellow-300">Login</Link>
           ) : (
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-300">{user?.name}</span>

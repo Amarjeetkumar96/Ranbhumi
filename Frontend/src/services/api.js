@@ -5,19 +5,23 @@ async function request(path, options = {}) {
     headers: { "Content-Type": "application/json", ...(options.headers || {}) },
     ...options,
   });
+
   if (!res.ok) {
     const text = await res.text();
     throw new Error(text || `Request failed: ${res.status}`);
   }
+
   const ct = res.headers.get("content-type") || "";
   return ct.includes("application/json") ? res.json() : res.text();
 }
 
 export const api = {
-  get: (p) => request(p),
-  post: (p, body) => request(p, { method: "POST", body: JSON.stringify(body) }),
+  get: (path) => request(path),
+  post: (path, body) =>
+    request(path, { method: "POST", body: JSON.stringify(body) }),
+  put: (path, body) =>
+    request(path, { method: "PUT", body: JSON.stringify(body) }),
+  delete: (path) => request(path, { method: "DELETE" }),
 };
 
 export const API_BASE_URL = BASE_URL;
-
-
