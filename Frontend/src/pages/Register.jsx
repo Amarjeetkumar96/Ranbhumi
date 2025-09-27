@@ -16,7 +16,7 @@ function Register() {
     setError("");
     try {
       await register(name, email, password, role);
-      navigate(role === "admin" ? "/admin" : "/dashboard");
+      navigate(role === "admin" ? "/Ranbhumi/admin" : "/Ranbhumi/dashboard");
     } catch (err) {
       setError(err.message || "Registration failed");
     }

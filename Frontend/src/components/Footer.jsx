@@ -4,9 +4,9 @@ function Footer() {
       <div className="glass rounded-2xl p-6 text-sm text-gray-300 flex flex-col md:flex-row items-center justify-between gap-3">
         <div>© 2025 Gaming Tournament Portal</div>
         <div className="flex items-center gap-4">
-          <a href="/leaderboard" className="hover:text-yellow-300">Leaderboard</a>
-          <a href="/schedule" className="hover:text-yellow-300">Schedule</a>
-          <a href="/login" className="hover:text-yellow-300">Login</a>
+          <a href="/Ranbhumi/leaderboard" className="hover:text-yellow-300">Leaderboard</a>
+          <a href="/Ranbhmi/schedule" className="hover:text-yellow-300">Schedule</a>
+          <a href="Ranbhumi//login" className="hover:text-yellow-300">Login</a>
         </div>
         <div className="flex items-center gap-3 text-lg">
           <a aria-label="Twitter" className="hover:opacity-80" href="#">𝕏</a>

@@ -17,7 +17,7 @@ function TournamentCard({ id, name, date, game, paid, fee, registrationDeadline 
         <div className="mt-2">
           <span className="badge">{paid ? `Paid $${fee}` : "Free"}</span>
         </div>
-        <Link to={`/tournament/${id}`} className="mt-3 inline-block btn-primary">
+        <Link to={`/Ranbhumi/tournament/${id}`} className="mt-3 inline-block btn-primary">
           View Details
         </Link>
       </div>

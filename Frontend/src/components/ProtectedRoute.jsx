@@ -9,11 +9,11 @@ function ProtectedRoute({ allowRoles }) {
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/Ranbhumi/login" replace />;
   }
 
   if (allowRoles && !allowRoles.includes(role)) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/Ranbhumi" replace />;
   }
 
   return <Outlet />;

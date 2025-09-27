@@ -14,7 +14,7 @@ function Login() {
     setError("");
     try {
       const logged = await login(email, password);
-      navigate(logged.role === "admin" ? "/admin" : "/dashboard");
+      navigate(logged.role === "admin" ? "/Ranbhumi/admin" : "/Ranbhumi/dashboard");
     } catch (err) {
       setError("Failed to login");
     }
@@ -28,7 +28,7 @@ function Login() {
         <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" className="w-full p-2 rounded bg-slate-700 border border-gray-600" />
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" className="w-full p-2 rounded bg-slate-700 border border-gray-600" />
         <button type="submit" className="w-full btn-primary">Login</button>
-        <p className="text-sm text-gray-300">No account? <Link to="/register" className="text-yellow-300 underline">Register</Link></p>
+        <p className="text-sm text-gray-300">No account? <Link to="/Ranbhumi/register" className="text-yellow-300 underline">Register</Link></p>
       </form>
     </div>
   );

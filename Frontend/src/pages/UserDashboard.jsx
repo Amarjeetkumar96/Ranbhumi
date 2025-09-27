@@ -37,7 +37,7 @@ function UserDashboard() {
         ))}
       </ul>
       <div className="mt-6">
-        <Link to="/team" className="btn-primary">Manage Team</Link>
+        <Link to="/Ranbhumi/team" className="btn-primary">Manage Team</Link>
       </div>
     </div>
   );

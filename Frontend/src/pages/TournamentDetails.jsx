@@ -39,7 +39,7 @@ function TournamentDetails() {
       }
       await joinTournament(tournament.id, user);
       alert("Registered successfully!");
-      navigate("/dashboard");
+      navigate("/Ranbhumi/dashboard");
     } catch (e) {
       alert(e.message || "Failed to register");
     }
