@@ -9,8 +9,11 @@ RUN apk add --no-cache git
 RUN git clone https://github.com/Amarjeetkumar96/Ranbhumi.git .
 
 # Install deps and build
+
+RUN npm install -g vite
 RUN npm install
 RUN npm run build
+
 
 # -------- Run stage --------
 FROM nginx:alpine
