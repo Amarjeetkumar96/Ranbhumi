@@ -16,8 +16,8 @@ services:
 
   backend:
     build:
-      context: .
-      dockerfile: Dockerfile.backend
+      context: ..
+      dockerfile: Docker/Dockerfile.backend
     container_name: ranbhumi-backend
     restart: always
     environment:
@@ -34,12 +34,12 @@ services:
 
   frontend:
     build:
-      context: .
-      dockerfile: Dockerfile.frontend
+      context: ..
+      dockerfile: Docker/Dockerfile.frontend
     container_name: ranbhumi-frontend
     restart: always
     ports:
-      - "80:80"
+      - "3080:3080"
     depends_on:
       - backend
     networks:

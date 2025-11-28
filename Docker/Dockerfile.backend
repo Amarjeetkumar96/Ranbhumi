@@ -1,28 +1,25 @@
 # ---------- Build stage ----------
-    FROM maven:3.9.6-eclipse-temurin-21 AS builder
-    WORKDIR /app
-    
-    # Install git to allow repo cloning
-    RUN apt-get update && apt-get install -y git
-    
-    # Clone your backend repo
-    RUN git clone https://github.com/Arpit-0908/Ranbhumi-Backend.git .
-    
-    # Build the Spring Boot JAR (cache Maven dependencies for speed)
-    RUN --mount=type=cache,target=/root/.m2 mvn clean install package -DskipTests
-    
-    # ---------- Run stage ----------
-    FROM eclipse-temurin:21-jre-alpine
-    WORKDIR /app
-    
-    # Copy jar from builder stage
-    COPY --from=builder /app/target/*.jar app.jar
-    
-    # Expose backend port
-    EXPOSE 8081
-    
-    # Optional JVM opts
-    ENV JAVA_OPTS=""
-    
-    ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+FROM maven:3.9.6-eclipse-temurin-17 AS builder
+WORKDIR /app
+
+# Copy the local backend code
+COPY ./backend /app
+
+# Build the Spring Boot WAR (cache Maven dependencies for speed)
+RUN --mount=type=cache,target=/root/.m2 mvn clean package -DskipTests
+
+# ---------- Run stage ----------
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+
+# Copy jar from builder stage and rename to app.jar
+COPY --from=builder /app/target/*.jar app.jar
+
+# Expose backend port
+EXPOSE 8081
+
+# Optional JVM opts
+ENV JAVA_OPTS=""
+
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
     

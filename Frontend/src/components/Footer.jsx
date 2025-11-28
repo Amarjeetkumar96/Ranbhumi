@@ -5,8 +5,8 @@ function Footer() {
         <div>© 2025 Gaming Tournament Portal</div>
         <div className="flex items-center gap-4">
           <a href="/Ranbhumi/leaderboard" className="hover:text-yellow-300">Leaderboard</a>
-          <a href="/Ranbhmi/schedule" className="hover:text-yellow-300">Schedule</a>
-          <a href="Ranbhumi//login" className="hover:text-yellow-300">Login</a>
+          <a href="/Ranbhumi/schedule" className="hover:text-yellow-300">Schedule</a>
+          <a href="/Ranbhumi/login" className="hover:text-yellow-300">Login</a>
         </div>
         <div className="flex items-center gap-3 text-lg">
           <a aria-label="Twitter" className="hover:opacity-80" href="#">𝕏</a>
